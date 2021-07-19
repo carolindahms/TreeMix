@@ -38,6 +38,8 @@ From the final runs, compares tree likelihoods, plots ML tree with bootstrap val
 ### References
 
 Milanesi, M., Capomaccio, S., Vajana, E., Bomba, L., Garcia, J.F., Ajmone-Marsan, P., Colli, L., 2017. BITE: an R package for biodiversity analyses. bioRxiv 181610. doi:10.1101/181610
+
 Pickrell, J., & Pritchard, J. (2012). Inference of population splits and mixtures from genome-wide allele frequency data. *Nature Precedings*, 1-1. 
+
 Zecca, G., Labra, M., & Grassi, F. (2020). Untangling the Evolution of American Wild Grapes: Admixed Species and How to Find Them. *Frontiers in Plant Science*, 10, 1814.
 
