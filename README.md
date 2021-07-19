@@ -15,27 +15,27 @@ number of bootstrap replicates, path to PHYLIP consense program, output file nam
 `sh Step1_TreeMix.sh input.treemix.gz 10 100 Nipponicus 500 /appl/soft/phylip-3.697/exe/consense 3spine 1 10 10`
  
 This builds a consensus tree from bootstraps and adds a specified range of m. 
-Tree replicates will be stored in the test_migrations folder.
+Tree replicates will be stored in the *test_migrations* folder.
  
 ## 2. Test migration edges with OptM 
 
-Set working directory to the test_migrations folder and run OptM (step A) from the R script `Step2&4_TreeMix.R`.
+Set working directory to the *test_migrations* folder and run OptM (step A) from the R script `Step2&4_TreeMix.R`.
 This helps identify the optimum number of m.
 
-## 3. Final runs with optimum number of migration edges #######
+## 3. Final runs with optimum number of migration edges
 
 Run `Step3_TreeMix.sh` by providing input file, maximum number of cores, block size, outgroup (or 'noRoot'), number of bootstrap replicates, number of migrations, output file name, number of independent runs (N), name of consensus tree built in Step 1, and path to consense program.
 
 `sh Step3_TreeMix.sh input.treemix.gz 10 100 Nipponicus 500 3 3spine 30 3spine_constree.newick /appl/soft/phylip-3.697/exe/consense`
 
 Returns trees from chosen number of independent runs with optimum number of m. 
-Final runs of trees will be stored in the final_runs folder
+Final runs of trees will be stored in the *final_runs* folder
 
-## 4. Tree visualization + Migration stats and support #######
+## 4. Tree visualization + Migration stats and support 
 
 For this step you will need to have saved the file `TreeMix_functions.R`
-Set working directory to the final_runs folder, run steps B and C from the Step2&4_TreeMix.R script
-From final runs, compares tree likelihoods, plots ML tree with bootstrap values and migration weight.
+Set working directory to the *final_runs* folder, run steps B and C from the `Step2&4_TreeMix.R` script
+From the final runs, compares tree likelihoods, plots ML tree with bootstrap values and migration weights.
 Returns Migration Support (MS), exact MS (MSE) and statistics such as least significant p-value from all runs, standard error and migrations weight for each migration event averaged over N runs.
 
 
