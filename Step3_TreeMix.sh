@@ -3,16 +3,16 @@
 #####################################################
 # This script builds a consensus tree with the optimum number of migration events from a specified number of bootstraps and uses it to run multiple final independent runs. 
 
-infile=$1       # TreeMix input file
+infile=$1           # TreeMix input file
 ncore=$2 	    # maximum number of cores to use
-blockk=$3 		# SNP block size
-outgroup=$4     # set outgroup, for an unrooted ML tree put here 'noRoot' (without quotes)
-nboot=$5		# number of bootstrap replicates of tree with migration
-mig=$6          # number of migration events
-outname=$7		# name for output file
-runs=$8         # number of independent runs (N)
-tree=$9         # name of consensus tree build without migration events (in newick format)
-pathP={$10}		# path to Phylip consense program
+blockk=$3 	    # SNP block size
+outgroup=$4         # set outgroup, for an unrooted ML tree put here 'noRoot' (without quotes)
+nboot=$5	    # number of bootstrap replicates of tree with migration
+mig=$6              # number of migration events
+outname=$7          # name for output file
+runs=$8             # number of independent runs (N)
+tree=$9             # name of consensus tree build without migration events (in newick format)
+pathP={$10}	    # path to Phylip consense program
 
 
 ############################
