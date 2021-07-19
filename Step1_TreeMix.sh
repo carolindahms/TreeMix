@@ -7,13 +7,13 @@
 infile=$1 		# TreeMix input file
 ncore=$2 		# maximum number of cores to use
 blockk=$3 		# SNP block size
-outgroup=$4 	# name of the selected outgroup population (for an unrooted ML tree put here 'noRoot' (without quotes))
+outgroup=$4 	        # name of the selected outgroup population (for an unrooted ML tree put here 'noRoot' (without quotes))
 nboot=$5		# number of bootstrap replicates of tree
 pathP=$6		# path to Phylip consense program. Example: /biosoftware/phylip/phylip-3.696/exe/consense
 outname=$7		# name for output file
-minM=$8         # minimum number of migrations to be tested with OptM (minM >= 1 as Treemix automatically tests for 0 migration events) 
-maxM=$9         # maximum number of migrations to be tested
-migrep=${10}    # number of replicates to test each number of migrations with OptM (no less than 2)
+minM=$8                 # minimum number of migrations to be tested with OptM (minM >= 1 as Treemix automatically tests for 0 migration events) 
+maxM=$9                 # maximum number of migrations to be tested
+migrep=${10}            # number of replicates to test each number of migrations with OptM (no less than 2)
 
 ############################
 ###### Settings file #######
