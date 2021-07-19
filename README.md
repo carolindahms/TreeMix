@@ -1,8 +1,6 @@
 # TreeMix
 Scripts to infer population aplits and mixture events from alelle frequency data using TreeMix by Pickrell & Pritchard (2012). This pipeline runs TreeMix with bootstrapping, helps choose number of migration events and creates a consensus tree. It plots the maximum likelihood tree with bootstrap values, drift and residuals and calculates statistics for every migration event, such as migration support, standard error and p-values.
 
-Pickrell, J., & Pritchard, J. (2012). Inference of population splits and mixtures from genome-wide allele frequency data. *Nature Precedings*, 1-1. 
-
 *Based on scripts written by Vajana and Milanesi (2017) and R functions by Zecca, Labra and Grassi (2019).*
 
 # Pipeline
@@ -37,4 +35,9 @@ For this step you will need to have saved the file `TreeMix_functions.R`
 Set working directory to the *final_runs* folder, run steps B and C from the `Step2&4_TreeMix.R` script.
 From the final runs, compares tree likelihoods, plots ML tree with bootstrap values and migration weights. Returns Migration Support (MS), exact MS (MSE) and statistics such as least significant p-value from all runs, standard error and migrations weight for each migration event averaged over N runs.
 
+### References
+
+Milanesi, M., Capomaccio, S., Vajana, E., Bomba, L., Garcia, J.F., Ajmone-Marsan, P., Colli, L., 2017. BITE: an R package for biodiversity analyses. bioRxiv 181610. doi:10.1101/181610
+Pickrell, J., & Pritchard, J. (2012). Inference of population splits and mixtures from genome-wide allele frequency data. *Nature Precedings*, 1-1. 
+Zecca, G., Labra, M., & Grassi, F. (2020). Untangling the Evolution of American Wild Grapes: Admixed Species and How to Find Them. *Frontiers in Plant Science*, 10, 1814.
 
