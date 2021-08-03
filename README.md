@@ -1,5 +1,5 @@
 # TreeMix
-Scripts to infer population aplits and mixture events from alelle frequency data using TreeMix by Pickrell & Pritchard (2012). This pipeline runs TreeMix with bootstrapping, helps choose number of migration events and creates a consensus tree. It plots the maximum likelihood tree with bootstrap values, drift and residuals and calculates statistics for every migration event, such as migration support, standard error and p-values.
+Scripts to infer population splits and mixture events from alelle frequency data using TreeMix by Pickrell & Pritchard (2012). This pipeline runs TreeMix with bootstrapping, helps choose number of migration events and creates a consensus tree. It plots a maximum likelihood tree with bootstrap values, drift and residuals and calculates statistics for every migration event, such as migration support, standard error and p-values.
 
 *Based on scripts written by Vajana and Milanesi (2017) and R functions by Zecca, Labra and Grassi (2019).*
 
