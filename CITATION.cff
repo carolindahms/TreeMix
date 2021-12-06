@@ -9,6 +9,7 @@ authors:
     family-names: Dahms
     orcid: 'https://orcid.org/0000-0002-3283-7820'
     email: carolin.dahms.ac@gmail.com
+date-released: "2021-07-18"
 identifiers:
   - type: url
     value: 'https://github.com/carolindahms/TreeMix'
