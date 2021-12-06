@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: TreeMix pipeline
+message: >-
+  If you use this dataset, please cite it using the
+  metadata from this file.
+type: dataset
+authors:
+  - given-names: Carolin
+    family-names: Dahms
+    orcid: 'https://orcid.org/0000-0002-3283-7820'
+    email: carolin.dahms.ac@gmail.com
+identifiers:
+  - type: url
+    value: 'https://github.com/carolindahms/TreeMix'
+abstract: >-
+  Scripts to infer population splits and mixture
+  events from allele frequency data using TreeMix by
+  Pickrell & Pritchard (2012).
+commit: d01820453dd7cfc9bfd4a0bd8252b1048fbf7130
+keywords:
+  - Phylogeny
+  - SNP
+ 
