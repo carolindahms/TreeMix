@@ -3,6 +3,7 @@
 #####################################################
 # This script builds a consensus tree from a specified number of bootstraps and uses it to run multiple replicates of trees with a specified range of migrations. 
 # Treemix replicates will be used to test for optimum number of migrations in the next step.
+# You will need to have installed TreeMix, Parallel and PHYLIP Consense.
 
 infile=$1 		# TreeMix input file
 ncore=$2 		# maximum number of cores to use
@@ -35,8 +36,6 @@ mkdir bootstrap
 ############################
 ### Bootstrap procedure ####
 ############################
-module load treemix
-module load parallel
 
 echo "**** Running TreeMix ****"
 if [ $outgroup = "noRoot" ]; then
@@ -64,8 +63,8 @@ echo "**** Running TreeMix: DONE ****"
 ### Create a file with all the bootstrapped trees
 for a in `seq 1 $nboot`
 do
-	bootf="bootstrap/"$outname"_constree_bootrep_"$a".treeout.gz"
-	gunzip -c $bootf | head -1 >> $outname"_bootconstree.tre"
+ bootf="bootstrap/"$outname"_constree_bootrep_"$a".treeout.gz"
+ gunzip -c $bootf | head -1 >> $outname"_bootconstree.tre"
 done
 
 echo "***** Bootstrap procedure: DONE *****"
