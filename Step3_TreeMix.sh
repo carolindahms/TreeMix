@@ -2,6 +2,7 @@
 ######### Step 3: Final runs with optimum m #########
 #####################################################
 # This script builds a consensus tree with the optimum number of migration events from a specified number of bootstraps and uses it to run multiple final independent runs. 
+# You will need to have installed TreeMix, Parallel and PHYLIP Consense.
 
 infile=$1           # TreeMix input file
 ncore=$2 	    # maximum number of cores to use
@@ -9,17 +10,14 @@ blockk=$3 	    # SNP block size
 outgroup=$4         # set outgroup, for an unrooted ML tree put here 'noRoot' (without quotes)
 nboot=$5	    # number of bootstrap replicates of tree with migration
 mig=$6              # number of migration events
-outname=$7          # name for output file
+outname=$7	    # name for output file
 runs=$8             # number of independent runs (N)
 tree=$9             # name of consensus tree build without migration events (in newick format)
-pathP={$10}	    # path to Phylip consense program
-
+pathP=${10}	    # path to Phylip consense program
 
 ############################
 ### Bootstrap procedure ####
 ############################
-module load treemix
-module load parallel
 
 mkdir final_runs
 mkdir final_runs/bootstrap
@@ -50,8 +48,8 @@ echo "**** Running TreeMix with $6 migration events: DONE ****"
 ### Create a file with all the bootstrapped trees
 for a in `seq 1 $nboot`
 do
-	bootf="final_runs/bootstrap/"$outname"_constree_bootrep_"$a".treeout.gz"
-	gunzip -c $bootf | head -1 >> $outname"_boottree.tre"
+ bootf="final_runs/bootstrap/"$outname"_constree_bootrep_"$a".treeout.gz"
+ gunzip -c $bootf | head -1 >> $outname"_boottree.tre"
 done
 
 echo "***** Bootstrap procedure: DONE *****"
